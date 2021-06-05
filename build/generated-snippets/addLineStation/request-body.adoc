@@ -1,0 +1,8 @@
+[source,options="nowrap"]
+----
+{
+  "upStationId" : 1,
+  "downStationId" : 2,
+  "distance" : 100
+}
+----

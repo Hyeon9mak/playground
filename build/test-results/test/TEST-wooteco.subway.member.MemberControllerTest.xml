@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wooteco.subway.member.MemberControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-06-04T14:12:30" hostname="Hyeon9makui-MacBook-Pro.local" time="0.086">
+  <properties/>
+  <testcase name="deleteMemberOfMine()" classname="wooteco.subway.member.MemberControllerTest" time="0.016"/>
+  <testcase name="updateMemberOfMine()" classname="wooteco.subway.member.MemberControllerTest" time="0.018"/>
+  <testcase name="findMemberOfMine()" classname="wooteco.subway.member.MemberControllerTest" time="0.014"/>
+  <testcase name="validateMember()" classname="wooteco.subway.member.MemberControllerTest" time="0.02"/>
+  <testcase name="createMember()" classname="wooteco.subway.member.MemberControllerTest" time="0.014"/>
+  <system-out><![CDATA[2021-06-04 23:12:30.330  INFO 48164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [wooteco.subway.member.MemberControllerTest], using SpringBootContextLoader
+2021-06-04 23:12:30.333  INFO 48164 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [wooteco.subway.member.MemberControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-06-04 23:12:30.333  INFO 48164 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [wooteco.subway.member.MemberControllerTest]: MemberControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-06-04 23:12:30.341  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration wooteco.subway.SubwayApplication for test class wooteco.subway.member.MemberControllerTest
+2021-06-04 23:12:30.342  INFO 48164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-06-04 23:12:30.342  INFO 48164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@315a72c6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@75f9614d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@715182a8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75224556, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@178cc576, org.springframework.test.context.support.DirtiesContextTestExecutionListener@29c13dc3, org.springframework.test.context.transaction.TransactionalTestExecutionListener@54f8ae91, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@339749ad, org.springframework.test.context.event.EventPublishingTestExecutionListener@42418ddc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62ce9f72, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7353399c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a80cc7a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3461819b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2242ad6a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4837ff67]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:30.360  INFO 48164 --- [    Test worker] w.subway.member.MemberControllerTest     : Starting MemberControllerTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:30.360  INFO 48164 --- [    Test worker] w.subway.member.MemberControllerTest     : The following profiles are active: test
+2021-06-04 23:12:30.567  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:30.588  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:30.666  INFO 48164 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-06-04 23:12:30.666  INFO 48164 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-06-04 23:12:30.667  INFO 48164 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-06-04 23:12:30.675  INFO 48164 --- [    Test worker] w.subway.member.MemberControllerTest     : Started MemberControllerTest in 0.327 seconds (JVM running for 33.67)
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /api/members/me
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = wooteco.subway.member.ui.MemberController
+           Method = wooteco.subway.member.ui.MemberController#deleteMemberOfMine(User)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 204
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = PUT
+      Request URI = /api/members/me
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"58"]
+             Body = {"email":"email@email.com","password":"password","age":20}
+    Session Attrs = {}
+
+Handler:
+             Type = wooteco.subway.member.ui.MemberController
+           Method = wooteco.subway.member.ui.MemberController#updateMemberOfMine(User, MemberRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/members/me
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = wooteco.subway.member.ui.MemberController
+           Method = wooteco.subway.member.ui.MemberController#findMemberOfMine(User)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2021-06-04 23:12:30.742  WARN 48164 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'validateEmailRequest' on field 'email': rejected value [null]; codes [NotNull.validateEmailRequest.email,NotNull.email,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [validateEmailRequest.email,email]; arguments []; default message [email]]; default message [INVALID_INPUT]]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/members/check-validation
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"27"]
+             Body = {"email":"email@email.com"}
+    Session Attrs = {}
+
+Handler:
+             Type = wooteco.subway.member.ui.MemberController
+           Method = wooteco.subway.member.ui.MemberController#validDuplicateEmail(ValidateEmailRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.validation.BindException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/members
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"58"]
+             Body = {"email":"email@gmail.com","password":"password","age":20}
+    Session Attrs = {}
+
+Handler:
+             Type = wooteco.subway.member.ui.MemberController
+           Method = wooteco.subway.member.ui.MemberController#createMember(MemberRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Location:"/members/1"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = /members/1
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wooteco.subway.line.domain.NameTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-04T14:12:45" hostname="Hyeon9makui-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <testcase name="createNullException()" classname="wooteco.subway.line.domain.NameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

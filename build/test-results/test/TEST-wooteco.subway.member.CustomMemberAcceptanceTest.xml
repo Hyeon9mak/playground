@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wooteco.subway.member.CustomMemberAcceptanceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-06-04T14:12:30" hostname="Hyeon9makui-MacBook-Pro.local" time="3.666">
+  <properties/>
+  <testcase name="validateJoinMemberEmail()" classname="wooteco.subway.member.CustomMemberAcceptanceTest" time="0.736"/>
+  <testcase name="validateDuplicateEmail()" classname="wooteco.subway.member.CustomMemberAcceptanceTest" time="0.813"/>
+  <testcase name="validateJoinMemberAge()" classname="wooteco.subway.member.CustomMemberAcceptanceTest" time="0.795"/>
+  <testcase name="manageMember()" classname="wooteco.subway.member.CustomMemberAcceptanceTest" time="0.691"/>
+  <testcase name="validateJoinMemberPassword()" classname="wooteco.subway.member.CustomMemberAcceptanceTest" time="0.628"/>
+  <system-out><![CDATA[2021-06-04 23:12:30.767  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [wooteco.subway.member.CustomMemberAcceptanceTest], using SpringBootContextLoader
+2021-06-04 23:12:30.768  INFO 48164 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [wooteco.subway.member.CustomMemberAcceptanceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-06-04 23:12:30.769  INFO 48164 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [wooteco.subway.member.CustomMemberAcceptanceTest]: CustomMemberAcceptanceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-06-04 23:12:30.770  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration wooteco.subway.SubwayApplication for test class wooteco.subway.member.CustomMemberAcceptanceTest
+2021-06-04 23:12:30.772  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-06-04 23:12:30.772  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@214b5444, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6994c78a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@672aa459, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@74d435a5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@f46b60f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@402198fa, org.springframework.test.context.transaction.TransactionalTestExecutionListener@729bf4cb, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@27b78e20, org.springframework.test.context.event.EventPublishingTestExecutionListener@1dfba217, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@51510f1a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7c419457, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@679cd371, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@27b72e8f, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7e47ccbc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@ed40c0f]
+2021-06-04 23:12:30.783  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:30.783  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2021-06-04 23:12:30.784  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:30.797  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Starting CustomMemberAcceptanceTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:30.797  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : The following profiles are active: test
+2021-06-04 23:12:30.947  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:30.966  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:30.969  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:30.969  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:30.975  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.029  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:31.030  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:31.030  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:31.049  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:31.049  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 251 ms
+2021-06-04 23:12:31.097  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Starting...
+2021-06-04 23:12:31.100  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Start completed.
+2021-06-04 23:12:31.106  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:31.173  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:31.307  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:31.342  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:31.452  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58040 (http) with context path ''
+2021-06-04 23:12:31.454  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Started CustomMemberAcceptanceTest in 0.668 seconds (JVM running for 34.448)
+Request method:	POST
+Request URI:	http://localhost:58040/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": null,
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:31.463  INFO 48164 --- [-auto-33-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 23:12:31.464  INFO 48164 --- [-auto-33-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 23:12:31.465  INFO 48164 --- [-auto-33-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 23:12:31.484 ERROR 48164 --- [-auto-33-exec-1] w.subway.exception.ExceptionAdvice       : Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'email': rejected value [null]; codes [NotNull.memberRequest.email,NotNull.email,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.email,email]; arguments []; default message [email]]; default message [INVALID_INPUT]] 
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 45
+host: localhost:58040
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Connection: close
+
+{
+    "error": "Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'email': rejected value [null]; codes [NotNull.memberRequest.email,NotNull.email,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.email,email]; arguments []; default message [email]]; default message [INVALID_INPUT]] "
+}
+Request method:	POST
+Request URI:	http://localhost:58040/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "",
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:31.495 ERROR 48164 --- [-auto-33-exec-2] w.subway.exception.ExceptionAdvice       : 올바르지 않은 이메일 형식입니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 43
+host: localhost:58040
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Connection: close
+
+{
+    "error": "INVALID_EMAIL"
+}
+Request method:	POST
+Request URI:	http://localhost:58040/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": " ",
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:31.502 ERROR 48164 --- [-auto-33-exec-3] w.subway.exception.ExceptionAdvice       : 올바르지 않은 이메일 형식입니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 44
+host: localhost:58040
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Connection: close
+
+{
+    "error": "INVALID_EMAIL"
+}
+Request method:	POST
+Request URI:	http://localhost:58040/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "mail.com",
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:31.510 ERROR 48164 --- [-auto-33-exec-4] w.subway.exception.ExceptionAdvice       : 올바르지 않은 이메일 형식입니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 51
+host: localhost:58040
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Connection: close
+
+{
+    "error": "INVALID_EMAIL"
+}
+2021-06-04 23:12:31.519  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:31.520  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown initiated...
+2021-06-04 23:12:31.520  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-33 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:31.537  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Starting CustomMemberAcceptanceTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:31.537  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : The following profiles are active: test
+2021-06-04 23:12:31.687  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.714  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.717  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.718  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.727  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:31.801  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:31.801  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:31.802  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:31.816  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:31.816  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 278 ms
+2021-06-04 23:12:31.849  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Starting...
+2021-06-04 23:12:31.850  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Start completed.
+2021-06-04 23:12:31.853  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:31.921  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:32.045  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:32.074  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:32.226  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58046 (http) with context path ''
+2021-06-04 23:12:32.229  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Started CustomMemberAcceptanceTest in 0.706 seconds (JVM running for 35.223)
+Request method:	POST
+Request URI:	http://localhost:58046/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:32.242  INFO 48164 --- [-auto-34-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 23:12:32.244  INFO 48164 --- [-auto-34-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 23:12:32.244  INFO 48164 --- [-auto-34-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 58
+host: localhost:58046
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Location: /members/1
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /members/1
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:58046/api/members/check-validation?email=dododo%40naver.com
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+###### HTTP Request ######
+GET /api/members/check-validation?email=dododo%40naver.com HTTP/1.1
+content-type: application/json; charset=UTF-8
+accept: */*
+host: localhost:58046
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	GET
+Request URI:	http://localhost:58046/api/members/check-validation?email=email%40email.com
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+2021-06-04 23:12:32.320 ERROR 48164 --- [-auto-34-exec-3] w.subway.exception.ExceptionAdvice       : 중복된 아이디가 존재합니다.
+
+###### HTTP Request ######
+GET /api/members/check-validation?email=email%40email.com HTTP/1.1
+content-type: application/json; charset=UTF-8
+accept: */*
+host: localhost:58046
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:31 GMT
+Connection: close
+
+{
+    "error": "DUPLICATED_EMAIL"
+}
+2021-06-04 23:12:32.343  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:32.345  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown initiated...
+2021-06-04 23:12:32.346  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-34 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:32.358  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Starting CustomMemberAcceptanceTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:32.358  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : The following profiles are active: test
+2021-06-04 23:12:32.497  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:32.517  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:32.519  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:32.519  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:32.526  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:32.576  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:32.577  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:32.577  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:32.591  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:32.591  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 232 ms
+2021-06-04 23:12:32.619  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Starting...
+2021-06-04 23:12:32.621  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Start completed.
+2021-06-04 23:12:32.624  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:32.685  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:32.881  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:32.909  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:33.087  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58051 (http) with context path ''
+2021-06-04 23:12:33.089  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Started CustomMemberAcceptanceTest in 0.742 seconds (JVM running for 36.084)
+Request method:	POST
+Request URI:	http://localhost:58051/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "password",
+    "age": null
+}
+2021-06-04 23:12:33.101  INFO 48164 --- [-auto-35-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 23:12:33.101  INFO 48164 --- [-auto-35-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 23:12:33.102  INFO 48164 --- [-auto-35-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 23:12:33.110 ERROR 48164 --- [-auto-35-exec-1] w.subway.exception.ExceptionAdvice       : Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'age': rejected value [null]; codes [NotNull.memberRequest.age,NotNull.age,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.age,age]; arguments []; default message [age]]; default message [INVALID_INPUT]] 
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 60
+host: localhost:58051
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Connection: close
+
+{
+    "error": "Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'age': rejected value [null]; codes [NotNull.memberRequest.age,NotNull.age,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.age,age]; arguments []; default message [age]]; default message [INVALID_INPUT]] "
+}
+Request method:	POST
+Request URI:	http://localhost:58051/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "password",
+    "age": -1
+}
+2021-06-04 23:12:33.119 ERROR 48164 --- [-auto-35-exec-2] w.subway.exception.ExceptionAdvice       : 나이 입력 값이 올바르지 않습니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 58
+host: localhost:58051
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Connection: close
+
+{
+    "error": "INVALID_AGE"
+}
+2021-06-04 23:12:33.129  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:33.129  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown initiated...
+2021-06-04 23:12:33.129  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-35 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:33.143  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Starting CustomMemberAcceptanceTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:33.143  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : The following profiles are active: test
+2021-06-04 23:12:33.270  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:33.287  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:33.289  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:33.289  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:33.295  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:33.366  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:33.367  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:33.367  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:33.385  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:33.385  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 241 ms
+2021-06-04 23:12:33.420  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Starting...
+2021-06-04 23:12:33.422  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Start completed.
+2021-06-04 23:12:33.425  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:33.486  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:33.587  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:33.607  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:33.707  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58055 (http) with context path ''
+2021-06-04 23:12:33.709  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Started CustomMemberAcceptanceTest in 0.578 seconds (JVM running for 36.703)
+Request method:	POST
+Request URI:	http://localhost:58055/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "password",
+    "age": 20
+}
+2021-06-04 23:12:33.718  INFO 48164 --- [-auto-36-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 23:12:33.718  INFO 48164 --- [-auto-36-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 23:12:33.719  INFO 48164 --- [-auto-36-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 58
+host: localhost:58055
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 201 Created
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Location: /members/1
+
+
+
+
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /members/1
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	POST
+Request URI:	http://localhost:58055/api/login/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "password"
+}
+
+###### HTTP Request ######
+POST /api/login/token HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 49
+host: localhost:58055
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE2MjI4MTU5NTMsImV4cCI6MTYyMjgxOTU1M30.UiVBoQ0OllzX2ruIL37HRhx1ecvB0xsDK23EzT1ig8w"
+}
+Request method:	GET
+Request URI:	http://localhost:58055/api/members/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+###### HTTP Request ######
+GET /api/members/me HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE2MjI4MTU5NTMsImV4cCI6MTYyMjgxOTU1M30.UiVBoQ0OllzX2ruIL37HRhx1ecvB0xsDK23EzT1ig8w
+accept: application/json
+host: localhost:58055
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 1,
+    "email": "email@email.com",
+    "age": 20
+}
+Request method:	PUT
+Request URI:	http://localhost:58055/api/members/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "new_password",
+    "age": 30
+}
+
+###### HTTP Request ######
+PUT /api/members/me HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE2MjI4MTU5NTMsImV4cCI6MTYyMjgxOTU1M30.UiVBoQ0OllzX2ruIL37HRhx1ecvB0xsDK23EzT1ig8w
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 62
+host: localhost:58055
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 200 OK
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+
+
+
+
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Length: 0
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+Request method:	DELETE
+Request URI:	http://localhost:58055/api/members/me
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+###### HTTP Request ######
+DELETE /api/members/me HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE2MjI4MTU5NTMsImV4cCI6MTYyMjgxOTU1M30.UiVBoQ0OllzX2ruIL37HRhx1ecvB0xsDK23EzT1ig8w
+accept: */*
+host: localhost:58055
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 204 No Content
+Keep-Alive: timeout=60
+Connection: keep-alive
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+
+
+
+
+HTTP/1.1 204 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Date: Fri, 04 Jun 2021 14:12:33 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+2021-06-04 23:12:33.823  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:33.823  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown initiated...
+2021-06-04 23:12:33.825  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-36 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:33.853  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Starting CustomMemberAcceptanceTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:33.853  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : The following profiles are active: test
+2021-06-04 23:12:33.997  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:34.017  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:34.020  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:34.021  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:34.028  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:34.079  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:34.080  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:34.080  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:34.093  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:34.093  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 239 ms
+2021-06-04 23:12:34.119  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Starting...
+2021-06-04 23:12:34.121  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-37 - Start completed.
+2021-06-04 23:12:34.124  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:34.179  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:34.254  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:34.274  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:34.387  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58062 (http) with context path ''
+2021-06-04 23:12:34.389  INFO 48164 --- [    Test worker] w.s.member.CustomMemberAcceptanceTest    : Started CustomMemberAcceptanceTest in 0.561 seconds (JVM running for 37.384)
+Request method:	POST
+Request URI:	http://localhost:58062/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": null,
+    "age": 20
+}
+2021-06-04 23:12:34.403  INFO 48164 --- [-auto-37-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-04 23:12:34.404  INFO 48164 --- [-auto-37-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-04 23:12:34.405  INFO 48164 --- [-auto-37-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-06-04 23:12:34.416 ERROR 48164 --- [-auto-37-exec-1] w.subway.exception.ExceptionAdvice       : Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'password': rejected value [null]; codes [NotNull.memberRequest.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.password,password]; arguments []; default message [password]]; default message [INVALID_INPUT]] 
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 52
+host: localhost:58062
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Connection: close
+
+{
+    "error": "Validation failed for argument [0] in public org.springframework.http.ResponseEntity wooteco.subway.member.ui.MemberController.createMember(wooteco.subway.member.dto.MemberRequest): [Field error in object 'memberRequest' on field 'password': rejected value [null]; codes [NotNull.memberRequest.password,NotNull.password,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberRequest.password,password]; arguments []; default message [password]]; default message [INVALID_INPUT]] "
+}
+Request method:	POST
+Request URI:	http://localhost:58062/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": "",
+    "age": 20
+}
+2021-06-04 23:12:34.429 ERROR 48164 --- [-auto-37-exec-2] w.subway.exception.ExceptionAdvice       : 유효하지 않은 비밀번호 입니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 50
+host: localhost:58062
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Connection: close
+
+{
+    "error": "INVALID_PASSWORD"
+}
+Request method:	POST
+Request URI:	http://localhost:58062/api/members
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "email@email.com",
+    "password": " ",
+    "age": 20
+}
+2021-06-04 23:12:34.439 ERROR 48164 --- [-auto-37-exec-3] w.subway.exception.ExceptionAdvice       : 유효하지 않은 비밀번호 입니다.
+
+###### HTTP Request ######
+POST /api/members HTTP/1.1
+accept: */*
+content-type: application/json; charset=UTF-8
+content-length: 51
+host: localhost:58062
+connection: Keep-Alive
+user-agent: Apache-HttpClient/4.5.13 (Java/14.0.1)
+accept-encoding: gzip,deflate
+
+
+###### HTTP Response ######
+HTTP/1.1 400 Bad Request
+Transfer-Encoding: chunked
+Connection: close
+Vary: Origin
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Content-Type: application/json
+
+
+
+
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Fri, 04 Jun 2021 14:12:34 GMT
+Connection: close
+
+{
+    "error": "INVALID_PASSWORD"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

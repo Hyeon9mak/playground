@@ -1,0 +1,10 @@
+[source,options="nowrap"]
+----
+[ {
+  "id" : 1,
+  "name" : "가양역"
+}, {
+  "id" : 2,
+  "name" : "등촌역"
+} ]
+----

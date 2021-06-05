@@ -1,0 +1,7 @@
+[source,options="nowrap"]
+----
+{
+  "email" : "email@email.com",
+  "password" : "password"
+}
+----

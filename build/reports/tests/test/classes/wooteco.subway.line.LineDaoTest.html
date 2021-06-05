@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LineDaoTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LineDaoTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/wooteco.subway.line.html">wooteco.subway.line</a> &gt; LineDaoTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.102s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">노선 중복 저장 시도</td>
+<td class="success">duplicatedSave()</td>
+<td class="success">0.646s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">모든 노선 호출</td>
+<td class="success">findAll()</td>
+<td class="success">0.726s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">id값에 맞는 노선 반환</td>
+<td class="success">findLine()</td>
+<td class="success">0.597s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">존재하지 않는 id 값을 가진 노선 반환 시도</td>
+<td class="success">findLineNotFoundException()</td>
+<td class="success">0.555s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">노선 삭제</td>
+<td class="success">remove()</td>
+<td class="success">0.715s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">존재하지 않는 id를 통한 노선 삭제 시도시 예외처리</td>
+<td class="success">removeNotFoundException()</td>
+<td class="success">0.638s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">노선 저장</td>
+<td class="success">save()</td>
+<td class="success">0.541s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">노선 업데이트</td>
+<td class="success">update()</td>
+<td class="success">0.684s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2021-06-04 23:12:35.721  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [wooteco.subway.line.LineDaoTest], using SpringBootContextLoader
+2021-06-04 23:12:35.722  INFO 48164 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [wooteco.subway.line.LineDaoTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-06-04 23:12:35.722  INFO 48164 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [wooteco.subway.line.LineDaoTest]: LineDaoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-06-04 23:12:35.724  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration wooteco.subway.SubwayApplication for test class wooteco.subway.line.LineDaoTest
+2021-06-04 23:12:35.725  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-06-04 23:12:35.725  INFO 48164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@43205bc7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@d601879, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@354d4fbf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@30bcca19, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@718351aa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7c2d3c33, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2342a4be, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@75785ecd, org.springframework.test.context.event.EventPublishingTestExecutionListener@1e9d5fc9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@bc4248d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3d15161f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@a2cb946, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7e3bccdd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@54f16fdb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41412eb4]
+2021-06-04 23:12:35.736  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:35.736  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown initiated...
+2021-06-04 23:12:35.737  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-38 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:35.751  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:35.751  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:35.902  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:35.921  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:35.925  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:35.925  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:35.931  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:35.981  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:35.982  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:35.982  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:35.994  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:35.994  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 242 ms
+2021-06-04 23:12:36.032  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Starting...
+2021-06-04 23:12:36.033  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Start completed.
+2021-06-04 23:12:36.036  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:36.102  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:36.219  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:36.241  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:36.431  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58074 (http) with context path ''
+2021-06-04 23:12:36.433  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.695 seconds (JVM running for 39.428)
+2021-06-04 23:12:36.450  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:36.450  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown initiated...
+2021-06-04 23:12:36.451  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-39 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:36.466  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:36.466  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:36.608  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:36.629  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:36.631  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:36.631  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:36.637  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:36.688  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:36.689  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:36.689  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:36.705  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:36.705  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 238 ms
+2021-06-04 23:12:36.731  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Starting...
+2021-06-04 23:12:36.732  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Start completed.
+2021-06-04 23:12:36.735  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:36.779  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:37.024  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:37.048  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:37.160  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58076 (http) with context path ''
+2021-06-04 23:12:37.161  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.709 seconds (JVM running for 40.156)
+2021-06-04 23:12:37.180  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:37.181  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown initiated...
+2021-06-04 23:12:37.182  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-40 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:37.196  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:37.196  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:37.327  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:37.351  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:37.355  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:37.355  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:37.366  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:37.424  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:37.425  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:37.426  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:37.445  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:37.445  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 248 ms
+2021-06-04 23:12:37.492  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Starting...
+2021-06-04 23:12:37.494  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Start completed.
+2021-06-04 23:12:37.497  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:37.585  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:37.701  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:37.727  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:37.838  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58078 (http) with context path ''
+2021-06-04 23:12:37.840  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.657 seconds (JVM running for 40.835)
+2021-06-04 23:12:37.870  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:37.871  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown initiated...
+2021-06-04 23:12:37.873  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-41 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:37.896  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:37.896  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:38.061  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.089  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.092  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.093  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.100  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.165  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:38.166  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:38.167  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:38.183  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:38.183  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 286 ms
+2021-06-04 23:12:38.207  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Starting...
+2021-06-04 23:12:38.208  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Start completed.
+2021-06-04 23:12:38.212  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:38.259  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:38.348  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:38.362  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:38.441  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58080 (http) with context path ''
+2021-06-04 23:12:38.443  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.567 seconds (JVM running for 41.437)
+2021-06-04 23:12:38.465  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:38.465  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Shutdown initiated...
+2021-06-04 23:12:38.466  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-42 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:38.483  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:38.483  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:38.632  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.648  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.652  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.653  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.666  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:38.714  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:38.715  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:38.715  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:38.733  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:38.734  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 250 ms
+2021-06-04 23:12:38.757  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Starting...
+2021-06-04 23:12:38.759  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Start completed.
+2021-06-04 23:12:38.762  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:38.815  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:38.914  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:38.931  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:39.022  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58082 (http) with context path ''
+2021-06-04 23:12:39.025  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.556 seconds (JVM running for 42.019)
+2021-06-04 23:12:39.111  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:39.111  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Shutdown initiated...
+2021-06-04 23:12:39.113  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-43 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:39.128  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:39.128  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:39.241  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.266  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.270  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.270  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.276  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.313  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:39.314  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:39.315  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:39.325  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:39.325  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 196 ms
+2021-06-04 23:12:39.354  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Starting...
+2021-06-04 23:12:39.355  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Start completed.
+2021-06-04 23:12:39.359  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:39.409  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:39.519  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:39.534  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:39.626  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58084 (http) with context path ''
+2021-06-04 23:12:39.628  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.513 seconds (JVM running for 42.623)
+2021-06-04 23:12:39.649  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:39.649  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Shutdown initiated...
+2021-06-04 23:12:39.650  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-44 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:39.660  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:39.660  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:39.776  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.797  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.801  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.802  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.807  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:39.849  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:39.850  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:39.851  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:39.865  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:39.866  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 205 ms
+2021-06-04 23:12:39.895  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Starting...
+2021-06-04 23:12:39.896  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Start completed.
+2021-06-04 23:12:39.899  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:39.945  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:40.069  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:40.085  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:40.185  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58086 (http) with context path ''
+2021-06-04 23:12:40.187  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.535 seconds (JVM running for 43.182)
+2021-06-04 23:12:40.201  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:40.202  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Shutdown initiated...
+2021-06-04 23:12:40.202  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-45 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2021-06-04 23:12:40.217  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Starting LineDaoTest using Java 14.0.1 on Hyeon9makui-MacBook-Pro.local with PID 48164 (started by hyeon9mak in /Users/hyeon9mak/Documents/GitHub/atdd-subway-fare)
+2021-06-04 23:12:40.217  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : The following profiles are active: test
+2021-06-04 23:12:40.369  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsHelpersAutoConfiguration$$EnhancerBySpringCGLIB$$3bd2ee05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:40.382  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars.resolver-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsValueResolversProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:40.385  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebars-pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:40.386  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration' of type [pl.allegro.tech.boot.autoconfigure.handlebars.HandlebarsAutoConfiguration$HandlebarsViewResolverConfiguration$$EnhancerBySpringCGLIB$$4eba18a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:40.393  INFO 48164 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'handlebarsViewResolver' of type [com.github.jknack.handlebars.springmvc.HandlebarsViewResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-04 23:12:40.488  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2021-06-04 23:12:40.489  INFO 48164 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-04 23:12:40.489  INFO 48164 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-06-04 23:12:40.510  INFO 48164 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-04 23:12:40.510  INFO 48164 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 292 ms
+2021-06-04 23:12:40.555  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Starting...
+2021-06-04 23:12:40.557  INFO 48164 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-46 - Start completed.
+2021-06-04 23:12:40.560  INFO 48164 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-06-04 23:12:40.613  INFO 48164 --- [    Test worker] n.r.s.b.l.access.LogbackAccessContext    : Configured the Logback-access: context=[default], config=[classpath:logback-access.xml]
+2021-06-04 23:12:40.708  INFO 48164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 23:12:40.725  INFO 48164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-06-04 23:12:40.826  INFO 48164 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 58088 (http) with context path ''
+2021-06-04 23:12:40.829  INFO 48164 --- [    Test worker] wooteco.subway.line.LineDaoTest          : Started LineDaoTest in 0.625 seconds (JVM running for 43.823)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.5.1</a> at 2021. 6. 4. 오후 11:12:51</p>
+</div>
+</div>
+</body>
+</html>

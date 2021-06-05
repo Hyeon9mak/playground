@@ -1,0 +1,9 @@
+[source,bash]
+----
+$ echo '{
+  "upStationId" : 1,
+  "downStationId" : 2,
+  "distance" : 100
+}' | http POST 'http://localhost:8080/api/lines/1/sections' \
+    'Content-Type:application/json;charset=UTF-8'
+----

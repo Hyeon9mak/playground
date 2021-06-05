@@ -1,0 +1,12 @@
+[source,bash]
+----
+$ echo '{
+  "name" : "2호선",
+  "color" : "bg-green-100",
+  "upStationId" : 1,
+  "downStationId" : 2,
+  "distance" : 100,
+  "extraFare" : 0
+}' | http PUT 'http://localhost:8080/api/lines/1' \
+    'Content-Type:application/json;charset=UTF-8'
+----

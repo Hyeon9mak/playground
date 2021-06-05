@@ -1,0 +1,16 @@
+[source,options="nowrap"]
+----
+{
+  "id" : 1,
+  "name" : "2호선",
+  "color" : "bg-green-100",
+  "extraFare" : 350,
+  "stations" : [ {
+    "id" : 1,
+    "name" : "건대입구역"
+  }, {
+    "id" : 2,
+    "name" : "성수역"
+  } ]
+}
+----

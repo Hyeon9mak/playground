@@ -1,0 +1,7 @@
+[source,bash]
+----
+$ echo '{
+  "name" : "가양역"
+}' | http POST 'http://localhost:8080/api/stations' \
+    'Content-Type:application/json;charset=UTF-8'
+----

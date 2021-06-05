@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/api/lines/1/sections?stationId=1' -i -X DELETE \
+    -H 'Content-Type: application/json;charset=UTF-8'
+----

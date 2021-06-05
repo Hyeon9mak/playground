@@ -1,0 +1,24 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 201 Created
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Location: /lines/1
+Content-Type: application/json
+Content-Length: 202
+
+{
+  "id" : 1,
+  "name" : "2호선",
+  "color" : "bg-green-100",
+  "extraFare" : 350,
+  "stations" : [ {
+    "id" : 1,
+    "name" : "건대입구역"
+  }, {
+    "id" : 2,
+    "name" : "성수역"
+  } ]
+}
+----

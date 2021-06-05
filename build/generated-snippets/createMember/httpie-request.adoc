@@ -1,0 +1,9 @@
+[source,bash]
+----
+$ echo '{
+  "email" : "email@gmail.com",
+  "password" : "password",
+  "age" : 20
+}' | http POST 'http://localhost:8080/api/members' \
+    'Content-Type:application/json;charset=UTF-8'
+----

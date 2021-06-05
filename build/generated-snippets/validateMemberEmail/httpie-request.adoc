@@ -1,0 +1,7 @@
+[source,bash]
+----
+$ echo '{
+  "email" : "email@email.com"
+}' | http GET 'http://localhost:8080/api/members/check-validation' \
+    'Content-Type:application/json;charset=UTF-8'
+----

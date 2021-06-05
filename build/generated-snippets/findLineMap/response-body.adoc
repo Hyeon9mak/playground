@@ -1,0 +1,46 @@
+[source,options="nowrap"]
+----
+[ {
+  "id" : 2,
+  "name" : "2호선",
+  "color" : "bg-green-100",
+  "distance" : 10,
+  "extraFare" : 0,
+  "sections" : [ {
+    "id" : 3,
+    "name" : "건대입구역",
+    "distanceToNextStation" : 10,
+    "transferLines" : [ {
+      "id" : 7,
+      "name" : "7호선",
+      "color" : "bg-green-200"
+    } ]
+  }, {
+    "id" : 4,
+    "name" : "성수역",
+    "distanceToNextStation" : 0,
+    "transferLines" : [ ]
+  } ]
+}, {
+  "id" : 7,
+  "name" : "7호선",
+  "color" : "bg-green-200",
+  "distance" : 10,
+  "extraFare" : 500,
+  "sections" : [ {
+    "id" : 1,
+    "name" : "면목역",
+    "distanceToNextStation" : 10,
+    "transferLines" : [ ]
+  }, {
+    "id" : 2,
+    "name" : "용마산역",
+    "distanceToNextStation" : 0,
+    "transferLines" : [ {
+      "id" : 2,
+      "name" : "2호선",
+      "color" : "bg-green-100"
+    } ]
+  } ]
+} ]
+----
