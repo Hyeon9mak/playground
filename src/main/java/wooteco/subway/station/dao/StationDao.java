@@ -1,5 +1,6 @@
 package wooteco.subway.station.dao;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,9 @@ import javax.sql.DataSource;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 import wooteco.subway.exception.DuplicateStationNameException;
@@ -35,9 +39,15 @@ public class StationDao {
 
     public Station insert(Station station) {
         try {
-            Map<String, String> params = new HashMap<>();
-            params.put("name", station.getName());
-            Long id = jdbcInsert.executeAndReturnKey(params).longValue();
+            Map<String, String> params1 = new HashMap<>();
+            params1.put("name", station.getName());
+
+            SqlParameterSource params2 = new MapSqlParameterSource()
+                .addValue("name", station.getName());
+
+            SqlParameterSource params3 = new BeanPropertySqlParameterSource(station);
+
+            Long id = jdbcInsert.executeAndReturnKey(params3).longValue();
             return new Station(id, station.getName());
         } catch (Exception e) {
             throw new DuplicateStationNameException();
