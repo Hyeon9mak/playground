@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import wooteco.subway.AcceptanceTest;
@@ -39,6 +41,21 @@ public class LineAcceptanceTest extends AcceptanceTest {
     private LineRequest lineRequest1;
     private LineRequest lineRequest2;
     private LineRequest lineRequest3;
+
+    @Autowired
+    DefaultListableBeanFactory defaultListableBeanFactory;
+
+    @Test
+    @DisplayName("Default Listable Bean Factory 확인 테스트")
+    void defaultListableBeanFactory() {
+        System.out.println("##################################################################### START");
+
+        for (String beanName : defaultListableBeanFactory.getBeanDefinitionNames()) {
+            System.out.println(beanName + "\t " + defaultListableBeanFactory.getBean(beanName).getClass().getName());
+        }
+
+        System.out.println("##################################################################### END");
+    }
 
     public static void 지하철_노선_생성됨(ExtractableResponse response) {
         assertThat(response.statusCode()).isEqualTo(HttpStatus.CREATED.value());
