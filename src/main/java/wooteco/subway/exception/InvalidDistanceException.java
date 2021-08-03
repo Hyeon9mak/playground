@@ -14,7 +14,7 @@ public class InvalidDistanceException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "INVALID_DISTANCE";
     }
 }

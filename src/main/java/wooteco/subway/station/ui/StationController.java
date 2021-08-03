@@ -2,6 +2,7 @@ package wooteco.subway.station.ui;
 
 import java.net.URI;
 import java.util.List;
+import javax.validation.Valid;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

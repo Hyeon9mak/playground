@@ -14,7 +14,7 @@ public class SameStationsInSameSectionException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "SAME_STATIONS_IN_SAME_SECTION";
     }
 }

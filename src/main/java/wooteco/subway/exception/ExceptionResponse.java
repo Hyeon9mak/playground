@@ -2,13 +2,13 @@ package wooteco.subway.exception;
 
 public class ExceptionResponse {
 
-    private final String error;
+    private final String message;
 
-    public ExceptionResponse(String error) {
-        this.error = error;
+    public ExceptionResponse(String message) {
+        this.message = message;
     }
 
-    public String getError() {
-        return error;
+    public String getMessage() {
+        return message;
     }
 }

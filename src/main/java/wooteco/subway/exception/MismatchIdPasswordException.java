@@ -14,7 +14,7 @@ public class MismatchIdPasswordException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "MISMATCH_ID_PASSWORD";
     }
 }

@@ -14,7 +14,7 @@ public class BothStationAlreadyRegisteredInLineException extends SubwayException
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "BOTH_STATION_ALREADY_REGISTERED_IN_LINE";
     }
 }

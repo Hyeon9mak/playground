@@ -14,7 +14,7 @@ public class DuplicateLineNameException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "DUPLICATED_LINE_NAME";
     }
 }

@@ -14,7 +14,7 @@ public class DuplicateEmailException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "DUPLICATED_EMAIL";
     }
 }

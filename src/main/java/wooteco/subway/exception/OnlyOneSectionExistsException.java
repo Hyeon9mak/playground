@@ -14,7 +14,7 @@ public class OnlyOneSectionExistsException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "ONLY_ONE_SECTION_EXISTS";
     }
 }

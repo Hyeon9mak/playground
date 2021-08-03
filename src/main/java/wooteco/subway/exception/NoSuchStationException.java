@@ -14,7 +14,7 @@ public class NoSuchStationException extends SubwayException {
     }
 
     @Override
-    public String error() {
+    public String message() {
         return "NO_SUCH_STATION";
     }
 }

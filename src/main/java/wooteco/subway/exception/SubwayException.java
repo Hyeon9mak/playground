@@ -10,5 +10,5 @@ public abstract class SubwayException extends RuntimeException {
 
     public abstract HttpStatus status();
 
-    public abstract String error();
+    public abstract String message();
 }

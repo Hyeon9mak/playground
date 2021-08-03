@@ -1,10 +1,13 @@
 package wooteco.subway.station.domain;
 
 import java.util.Objects;
+import javax.validation.constraints.NotNull;
 
 public class Station {
 
     private final Id id;
+
+    @NotNull(message = "이름은 Null 일 수 없습니다.")
     private final Name name;
 
     public Station(String name) {
