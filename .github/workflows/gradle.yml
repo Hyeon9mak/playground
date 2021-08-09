@@ -25,7 +25,7 @@ jobs:
     - name: graldew 파일 권한 확인
       run: ls -l gradlew
     - name: graldew 파일 권한 수정
-      run: chmod +x gradlew
+      run: chmod 777 gradlew
     - name: graldew 파일 권한 확인
       run: ls -l gradlew
 
