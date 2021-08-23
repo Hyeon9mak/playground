@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="wooteco.subway.station.StationServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-06-04T14:12:50" hostname="Hyeon9makui-MacBook-Pro.local" time="0.015">
-  <properties/>
-  <testcase name="showAllDtos()" classname="wooteco.subway.station.StationServiceTest" time="0.014"/>
-  <testcase name="save()" classname="wooteco.subway.station.StationServiceTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

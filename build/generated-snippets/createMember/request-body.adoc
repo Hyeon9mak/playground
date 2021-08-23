@@ -1,8 +1,0 @@
-[source,options="nowrap"]
-----
-{
-  "email" : "email@gmail.com",
-  "password" : "password",
-  "age" : 20
-}
-----

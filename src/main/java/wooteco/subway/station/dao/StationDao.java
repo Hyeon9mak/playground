@@ -1,6 +1,5 @@
 package wooteco.subway.station.dao;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -71,5 +70,9 @@ public class StationDao {
     public int delete(Long id) {
         String sql = "DELETE FROM STATION WHERE id = ?";
         return jdbcTemplate.update(sql, id);
+    }
+
+    public StationDao dropTable() {
+        return new StationDao(jdbcTemplate, jdbcInsert.getJdbcTemplate().getDataSource());
     }
 }

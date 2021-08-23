@@ -56,7 +56,7 @@ public class AuthAcceptanceTest extends AcceptanceTest {
             .extract().jsonPath().get("error");
 
         // then
-        assertThat(detailErrorMessage).isEqualTo(new MismatchIdPasswordException().error());
+        assertThat(detailErrorMessage).isEqualTo(new MismatchIdPasswordException().message());
     }
 
     @DisplayName("Bearer Auth 존재하지 않은 이메일로 로그인 실패")
@@ -77,7 +77,7 @@ public class AuthAcceptanceTest extends AcceptanceTest {
             .extract().jsonPath().get("error");
 
         // then
-        assertThat(detailErrorMessage).isEqualTo(new MismatchIdPasswordException().error());
+        assertThat(detailErrorMessage).isEqualTo(new MismatchIdPasswordException().message());
     }
 
     @DisplayName("Bearer Auth 유효하지 않은 토큰")
@@ -97,7 +97,7 @@ public class AuthAcceptanceTest extends AcceptanceTest {
             .extract().jsonPath().get("error");
 
         // then
-        assertThat(detailErrorMessage).isEqualTo(new AuthorizationException().error());
+        assertThat(detailErrorMessage).isEqualTo(new AuthorizationException().message());
     }
 
     @DisplayName("Bearer Auth 토큰 없이 API 요청")
@@ -115,7 +115,7 @@ public class AuthAcceptanceTest extends AcceptanceTest {
             .extract().jsonPath().get("error");
 
         // then
-        assertThat(detailErrorMessage).isEqualTo(new AuthorizationException().error());
+        assertThat(detailErrorMessage).isEqualTo(new AuthorizationException().message());
     }
 
     public static ExtractableResponse<Response> 회원_등록되어_있음(String email, String password, Integer age) {

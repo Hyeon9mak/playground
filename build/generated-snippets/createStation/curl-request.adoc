@@ -1,8 +1,0 @@
-[source,bash]
-----
-$ curl 'http://localhost:8080/api/stations' -i -X POST \
-    -H 'Content-Type: application/json;charset=UTF-8' \
-    -d '{
-  "name" : "가양역"
-}'
-----
