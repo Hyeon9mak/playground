@@ -23,6 +23,12 @@ jobs:
         
     - name: graldew 자바 8 버전으로 빌드
       run: ./gradlew -Dspring.profiles.active=local
+      
+    - name: 테스트용 파일 생성
+      run: touch TEST.txt
+    
+    - name: 테스트용 파일 생성 확인
+      run: ls -l
     
     - name: Set up JDK 11
       uses: actions/setup-java@v2
@@ -32,3 +38,6 @@ jobs:
     
     - name: graldew 자바 11 버전으로 빌드
       run: ./gradlew -Dspring.profiles.active=local
+    
+    - name: 테스트용 파일 생성 확인
+      run: ls -l
